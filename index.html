@@ -1,1 +1,23 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"/><meta name="viewport"content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><meta name="format-detection"content="telephone=no,date=no,address=no,email=no"/><title>hCaptcha Demo</title><script src="https://js.hcaptcha.com/1/api.js"async defer></script></head><body><div class="h-captcha"data-sitekey="c78ad1ac-080d-473f-a6ef-b3d7a5d3acf9"></div></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no,date=no,address=no,email=no" />
+	<title>hCaptcha</title>
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+
+<body>
+	<div class="h-captcha" data-sitekey="c78ad1ac-080d-473f-a6ef-b3d7a5d3acf9" data-callback="captchaCallback"></div>
+	<script>
+		function captchaCallback(response) {
+			if (typeof Captcha !== "undefined") {
+				Captcha.postMessage(response);
+			}
+		}
+	</script>
+</body>
+
+</html>
